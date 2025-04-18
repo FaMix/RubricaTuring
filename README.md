@@ -1,6 +1,6 @@
 # Rubrica Java
 
-**Rubrica ** è un'applicazione desktop Java che permette di gestire una lista di contatti (nome, cognome, indirizzo, telefono, età) con autenticazione utenti e persistenza su database MySQL.
+**Rubrica** è un'applicazione desktop Java che permette di gestire una lista di contatti (nome, cognome, indirizzo, telefono, età) con autenticazione utenti e persistenza su database MySQL.
 
 ## Caratteristiche principali
 
