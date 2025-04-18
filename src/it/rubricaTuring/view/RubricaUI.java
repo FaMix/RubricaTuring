@@ -14,6 +14,7 @@ import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
 
 import it.rubricaTuring.model.Persona;
+import it.rubricaTuring.persistenza.GestioneDB;
 
 public class RubricaUI extends JFrame {
     /**
@@ -83,6 +84,7 @@ public class RubricaUI extends JFrame {
                 int conferma = JOptionPane.showConfirmDialog(this, "Eliminare la persona " +
                         this.getListaPersone().get(rigaSelezionata) + "?", "Conferma", JOptionPane.YES_NO_OPTION);
                 if(conferma == JOptionPane.YES_OPTION) {
+                	GestioneDB.eliminaPersona(this.getListaPersone().get(rigaSelezionata));
                     this.getListaPersone().remove(rigaSelezionata);
                     this.aggiornaTabella();
                 }

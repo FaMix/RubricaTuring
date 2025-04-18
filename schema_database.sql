@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS rubrica_db;
+CREATE DATABASE rubrica_db;
+USE rubrica_db;
+
+CREATE TABLE persone (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    cognome VARCHAR(50) NOT NULL,
+    indirizzo VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    eta INT NOT NULL
+);
+
+CREATE TABLE utenti (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(50) NOT NULL
+);

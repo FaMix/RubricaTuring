@@ -87,7 +87,7 @@ public class LoginUI extends JFrame {
         if (autenticato) {
             // Chiudi login e apri finestra principale
             dispose();
-            RubricaUI ui = new RubricaUI(listaPersone);
+            RubricaUI ui = new RubricaUI(this.listaPersone);
             ui.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, "Login errato. Riprova.",

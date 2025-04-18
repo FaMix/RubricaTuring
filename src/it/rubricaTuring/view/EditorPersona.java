@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
 import it.rubricaTuring.model.Persona;
+import it.rubricaTuring.persistenza.GestioneDB;
 
 public class EditorPersona extends JFrame {
     /**
@@ -91,7 +92,7 @@ public class EditorPersona extends JFrame {
     }
 
     private void salva() {
-        // Validazione dei campis
+        // Validazione dei campi
         if(this.nome.getText().trim().isEmpty() || this.cognome.getText().trim().isEmpty() || this.eta.getText().trim().isEmpty()
         		|| this.indirizzo.getText().trim().isEmpty() || this.telefono.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ogni campo e' obbligatorio!");
@@ -109,12 +110,14 @@ public class EditorPersona extends JFrame {
                 );
                 // Aggiungi alla lista
                 this.parent.getListaPersone().add(this.persona);
+                GestioneDB.salvaPersona(this.persona);
             } else { // Modifica di una persona esistente
             	this.persona.setNome(this.nome.getText().trim());
                 this.persona.setCognome(this.cognome.getText().trim());
                 this.persona.setIndirizzo(this.indirizzo.getText().trim());
                 this.persona.setTelefono(this.telefono.getText().trim());
                 this.persona.setEta(eta);
+                GestioneDB.salvaPersona(this.persona);
             }
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Inserire un'età valida");

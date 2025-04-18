@@ -1,6 +1,7 @@
 package it.rubricaTuring.model;
 
 public class Persona {
+	private int id;
 	private String nome;
     private String cognome;
     private String indirizzo;
@@ -8,7 +9,6 @@ public class Persona {
     private int eta;
     
 	public Persona(String nome, String cognome, String indirizzo, String telefono, int eta) {
-		super();
 		this.nome = nome;
 		this.cognome = cognome;
 		this.indirizzo = indirizzo;
@@ -45,6 +45,14 @@ public class Persona {
 	}
 	public void setEta(int eta) {
 		this.eta = eta;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override

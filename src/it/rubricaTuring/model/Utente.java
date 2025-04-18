@@ -1,7 +1,8 @@
 package it.rubricaTuring.model;
 
 public class Utente {
-    private String username;
+	private int id;
+	private String username;
     private String password;
 
     public Utente(String username, String password) {
@@ -23,6 +24,14 @@ public class Utente {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
